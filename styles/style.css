@@ -231,3 +231,130 @@ img {
   margin: 0 auto;
   width: 100%;
 }
+
+body {
+  height: 100vh;
+  background-color: #474788;
+}
+
+h1 {
+  font: 5rem "Monofett", cursive;
+  color: #BD9B04;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 50px 0 60px 0;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.interactive-window {
+  position: relative;
+  max-width: 847px;
+  height: 560px;
+  background: url("../images/main-window-bg.jpg") no-repeat center;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+.interactive-window img, .interactive-window .modal-box {
+  position: absolute;
+}
+
+.interactive-window .modal-box {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #0D0D3D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.interactive-window .modal-box p {
+  font: 400 1.3rem/1.4 "Lato", sans-serif;
+  color: #BD9B04;
+  letter-spacing: 1.2px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.interactive-window .modal-box button {
+  font: 700 1.1rem "Lato", sans-serif;
+  color: #0D0D3D;
+  background-color: #BD9B04;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  width: 160px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.objects-list {
+  background-color: #0D0D3D;
+  max-width: 284px;
+  padding: 80px 20px 60px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.objects-list h2 {
+  font: 700 1.2rem "Lato", sans-serif;
+  color: #0D0D3D;
+  background-color: #BD9B04;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  max-width: 217px;
+  position: absolute;
+  top: -21.5px;
+}
+
+.objects-list ul {
+  list-style-type: none;
+}
+
+.objects-list ul li {
+  font: 400 1.4rem "Lato", sans-serif;
+  color: #0D0D3D;
+  background-color: #BD9B04;
+  border-radius: 5px;
+  padding: 10px;
+  width: 160px;
+  text-align: center;
+}

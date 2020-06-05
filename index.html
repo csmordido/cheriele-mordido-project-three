@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tidy Desk</title>
+
   <!-- external stylesheet -->
   <link rel="stylesheet" href="./styles/style.css">
+
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Monofett&display=swap" rel="stylesheet">
 </head>
@@ -13,7 +15,7 @@
   <div class="wrapper">
     <!-- header starts -->
     <header>
-      <h1>Tidy Desk</h1>
+      <h1>Tidy Desk <span>A hidden object game</span></h1>
     </header>
     <!-- header ends -->
     <!-- main starts -->
@@ -22,28 +24,34 @@
         <div class="objects-list">
           <h2>Objects to find</h2>
           <ul>
-            <li>coffee cup</li>
+            <li class="coffee-cup">coffee cup</li>
+            <li class="crumpled-paper">crumpled paper</li>
+            <li class="bottled-water">bottled water</li>
+            <li class="fork">fork</li>
+            <li class="post-it">post-it with stick man</li>
           </ul>
-        </div>
+        </div> <!-- .objects-list -->
+
         <div class="interactive-window">
           <img src="./images/coffee-cup.svg" alt="" class="coffee-cup">
           <img src="./images/crumpled-paper.svg" alt="" class="crumpled-paper">
           <img src="./images/fork.svg" alt="" class="fork">
           <img src="./images/post-it.svg" alt="" class="post-it">
           <img src="./images/sunrise.svg" alt="" class="sunrise">
-          <img src="./images/water-bottle-03.svg" alt="" class="water-bottle">
-          <div class="modal-box visually-hidden">
+          <img src="./images/water-bottle-03.svg" alt="" class="bottled-water">
+          <div class="modal-box">
             <p>Pulled an all-nighter to finish the project and now the desk's a mess! Really need to clean up before starting a new project.</p>
             <button type="button">Let's do it!</button>
-          </div>
-        </div>
-      </div>
+          </div> <!-- .modal-box -->
+        </div> <!-- .interactive-window -->
+      </div> <!-- .main-container -->
     </main>
     <!-- main ends -->
-  </div>
+  </div> <!-- .wrapper -->
   
   <!-- jquery cdn -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+
   <!-- external javascript -->
   <script src="script.js"></script>
   

@@ -132,7 +132,6 @@ h1 span {
   }
   ul {
     list-style-type: none;
-    display: none;
     li {
       font: 400 1.3rem "Lato", sans-serif;
       color: $color-blue;
@@ -142,6 +141,7 @@ h1 span {
       width: 170px;
       text-align: center;
       margin-bottom: 10px;
+      display: none;
     }
   }
 }

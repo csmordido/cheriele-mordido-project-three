@@ -3,11 +3,14 @@ const tidyDesk= {};
 tidyDesk.list = $(".objects-list ul");
 tidyDesk.listItem = $(".objects-list ul li");
 
-tidyDesk.checkListItem = () => {
-  const hiddenListItems = tidyDesk.listItem.attr("style", "display: none;");
-  const hiddenListItemsN = hiddenListItems.length;
-  console.log(hiddenListItemsN);
+tidyDesk.countHiddenImages = function() {
+  const hiddenImagesN = $("img:hidden").length;
+  return hiddenImagesN;
 }
+
+
+
+
 
 
 
@@ -17,19 +20,31 @@ tidyDesk.checkListItem = () => {
 tidyDesk.init = () => {
   $(".modal-box button").on("click", function() {
     $(".modal-box").fadeOut(500);
-    tidyDesk.list.fadeIn(500);
+    tidyDesk.listItem.fadeIn(500);
   })
 
   $("img").on("click", function() {
     const imgClass = $(this).attr("class");
-    $(this).fadeOut(500);
-    tidyDesk.list
-      .find("." + imgClass)
-      .fadeOut(500);
-      tidyDesk.checkListItem();    
-
+    if (imgClass !== "sunrise") {
+      $(this).fadeOut(500);
+      tidyDesk.list
+        .find("." + imgClass)
+        .fadeOut(500);
+      const numberOfHiddenImages = tidyDesk.countHiddenImages();
+      if ( numberOfHiddenImages === 4) {
+        $(".modal-box")
+          .html(`<p>Congratulations! Your desk is ready for another bootcamp project!</p>
+          <button type="button">Play again</button>`)
+          .fadeIn(500);
+      }
+      $(".modal-box button").on("click", function() {
+        $(".modal-box").fadeOut(500);
+        tidyDesk.listItem.fadeIn(500);
+        $("img").fadeIn(500);
+      })
+    }
+    
   })
-
 }
 
 

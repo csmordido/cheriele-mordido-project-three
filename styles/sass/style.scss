@@ -107,7 +107,7 @@ h1 span {
   }
 }
 
-.objects-list {
+.images-list {
   background-color: $color-blue;
   max-width: 284px;
   padding: 80px 20px 60px 20px;
@@ -145,3 +145,5 @@ h1 span {
     }
   }
 }
+
+@import './media-queries';

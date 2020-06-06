@@ -1,7 +1,7 @@
 const tidyDesk= {};
 
-tidyDesk.list = $(".objects-list ul");
-tidyDesk.listItem = $(".objects-list ul li");
+tidyDesk.list = $(".images-list ul");
+tidyDesk.listItem = $(".images-list ul li");
 
 tidyDesk.countHiddenImages = function() {
   const hiddenImagesN = $("img:hidden").length;

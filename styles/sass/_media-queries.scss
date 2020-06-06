@@ -1,0 +1,31 @@
+@media (max-width: 1142px) {
+  .wrapper {
+    max-width: 847px;
+  }
+
+  .main-container {
+    flex-direction: column-reverse;
+    // justify-content: initial;
+    // align-items: unset;
+  }
+
+  .images-list {
+    max-width: initial;
+    width: 100%;
+    flex-basis: auto;
+    padding: 70px 50px 35px 50px;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .interactive-window {
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 70px;
+  }
+
+}

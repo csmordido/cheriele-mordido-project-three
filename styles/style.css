@@ -571,6 +571,9 @@ h1 span {
     font-size: 1.2rem;
     max-width: 305px;
   }
+  .crumpled-paper {
+    left: 120px;
+  }
   .images-list ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

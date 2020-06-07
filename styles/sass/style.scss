@@ -6,6 +6,10 @@ body {
   background-color: $color-purple;
 }
 
+.down-arrow {
+  display: none;
+}
+
 h1 {
   font: 7rem "Monofett", cursive;
   color: $color-yellow;

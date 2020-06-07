@@ -11,13 +11,18 @@
   <!-- external stylesheet -->
   <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
   <div class="wrapper">
     <!-- header starts -->
     <header>
       <h1>Tidy Desk <span>A hidden object game</span></h1>
+      <div class="down-arrow">
+        <a href="#main-game"><span class="visually-hidden">Scroll down</span>&#x25BC;</a>
+      </div>
     </header>
     <!-- header ends -->
+
     <!-- main starts -->
     <main>
       <div class="main-container">
@@ -32,7 +37,7 @@
           </ul>
         </div> <!-- .images-list -->
 
-        <div class="interactive-window">
+        <div class="interactive-window" id="main-game">
           <img src="./images/coffee-cup.svg" alt="" class="coffee-cup">
           <img src="./images/crumpled-paper.svg" alt="" class="crumpled-paper">
           <img src="./images/fork.svg" alt="" class="fork">

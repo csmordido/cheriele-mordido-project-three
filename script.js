@@ -11,7 +11,7 @@ tidyDesk.countHiddenImages = function() {
 tidyDesk.startGame = function() {
   $(".modal-box button").on("click", function() {
     $(".modal-box").fadeOut(500);
-    tidyDesk.listItem.fadeIn(500);
+    tidyDesk.listItem.animate({opacity:1});
   })
 }
 
@@ -28,7 +28,7 @@ tidyDesk.foundAllImages = function(numberOfImagesToFind) {
 tidyDesk.resetGame = function() {
   $(".modal-box button").on("click", function() {
     $(".modal-box").fadeOut(500);
-    tidyDesk.listItem.fadeIn(500);
+    tidyDesk.listItem.animate({opacity:1});;
     $("img").fadeIn(500);
   })
 }
@@ -42,8 +42,7 @@ tidyDesk.init = () => {
       $(this).fadeOut(500);
       tidyDesk.list
         .find("." + imgClass)
-        .fadeOut(500);
-
+        .animate({opacity:0});
       tidyDesk.foundAllImages(5);
     }
 

@@ -441,3 +441,21 @@ h1 span {
     margin-bottom: 70px;
   }
 }
+
+@media (max-width: 867px) {
+  .wrapper {
+    max-width: 690px;
+  }
+  .coffee-cup {
+    right: 120px;
+    bottom: 20px;
+  }
+  .crumpled-paper {
+    left: 75px;
+    bottom: 120px;
+  }
+  .bottled-water {
+    bottom: 210px;
+    left: 130px;
+  }
+}

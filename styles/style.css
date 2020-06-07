@@ -459,3 +459,35 @@ h1 span {
     left: 130px;
   }
 }
+
+@media (max-width: 867px) {
+  .wrapper {
+    max-width: 480px;
+  }
+  .interactive-window {
+    background: url("../images/main-window-bg-480.jpg") no-repeat center;
+  }
+  .coffee-cup {
+    right: 0;
+    bottom: 100px;
+  }
+  .crumpled-paper {
+    left: 40px;
+    bottom: 205px;
+  }
+  .fork {
+    bottom: 80px;
+    right: 210px;
+  }
+  .post-it {
+    right: 10px;
+    top: 200px;
+  }
+  .sunrise {
+    right: 0;
+  }
+  .bottled-water {
+    bottom: 20px;
+    left: 105px;
+  }
+}

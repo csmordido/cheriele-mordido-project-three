@@ -1,9 +1,11 @@
 const tidyDesk= {};
 
 tidyDesk.modalBox = $(".modal-box");
+tidyDesk.modalBoxParagraph = $(".modal-box p");
+tidyDesk.modalBoxButton = $(".modal-box button");
 tidyDesk.timerParagraph = $(".timer p");
 tidyDesk.timerText = $(".timer p span");
-tidyDesk.timerSeconds = $(".timer p span").text();
+tidyDesk.timerSeconds = parseInt($(".timer p span").text(), 10);
 tidyDesk.list = $(".images-list ul");
 tidyDesk.listItem = $(".images-list ul li");
 
@@ -13,7 +15,7 @@ tidyDesk.countHiddenImages = function() {
 }
 
 tidyDesk.startGame = function() {
-  $(".modal-box button").on("click", function() {
+  tidyDesk.modalBoxButton.on("click", function() {
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
     tidyDesk.timer(tidyDesk.timerSeconds);
@@ -22,16 +24,16 @@ tidyDesk.startGame = function() {
 
 tidyDesk.foundAllImages = function(numberOfImagesToFind) {
   const numberOfHiddenImages = tidyDesk.countHiddenImages();
-  if ( numberOfHiddenImages === numberOfImagesToFind - 1) {
-    tidyDesk.modalBox
-      .html(`<p>Congratulations! Your desk is ready for another bootcamp project!</p>
-      <button type="button">Play again</button>`)
-      .fadeIn(500);
+  if ( numberOfHiddenImages === numberOfImagesToFind - 1 ) {
+    tidyDesk.modalBoxParagraph
+      .text("Congratulations! Your desk is ready for another bootcamp project!");
+    tidyDesk.modalBoxButton.text("Play again");
+    tidyDesk.modalBox.fadeIn(500);
   }
 }
 
 tidyDesk.resetGame = function() {
-  $(".modal-box button").on("click", function() {
+  tidyDesk.modalBoxButton.on("click", function() {
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
     $("img").fadeIn(500);
@@ -42,22 +44,19 @@ tidyDesk.resetGame = function() {
 tidyDesk.timer = function(seconds) {
   let counter = seconds;
   let timer = setInterval(function() {
-    tidyDesk.timerParagraph.fadeTo("fast", 1);
     tidyDesk.timerText.text(counter);
     counter--;
     numberOfHiddenImages = tidyDesk.countHiddenImages();
     if (numberOfHiddenImages === 5) {
       clearInterval(timer);
-      tidyDesk.timerParagraph.fadeTo("fast", 0.5);
       tidyDesk.timerText.text(seconds);
-    } else if (counter === 0) {
+    } else if (counter === -1) {
       clearInterval(timer);
-      tidyDesk.timerParagraph.fadeTo("fast", 0.5);
       tidyDesk.timerText.text(seconds);
-      tidyDesk.modalBox
-        .html(`<p>Time's up!</p>
-        <button type="button">Play again</button>`)
-        .fadeIn(500);
+      tidyDesk.listItem.fadeTo(500, 0);
+      tidyDesk.modalBoxParagraph.text("Time's up!");
+      tidyDesk.modalBoxButton.text("Play again");
+      tidyDesk.modalBox.fadeIn(500);
       tidyDesk.resetGame();
     }
   }, 1000);

@@ -346,6 +346,13 @@ h1 span {
   color: #BD9B04;
 }
 
+.interactive-window img {
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
 .interactive-window img:focus {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);

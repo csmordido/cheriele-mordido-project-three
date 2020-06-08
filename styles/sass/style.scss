@@ -94,6 +94,10 @@ h1 span {
   }
 }
 
+.interactive-window img {
+  transition: transform 0.4s;
+}
+
 .interactive-window img:focus {
   transform: scale(1.5);
 }

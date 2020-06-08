@@ -19,7 +19,7 @@ tidyDesk.startGame = function() {
     $("img").attr("tabindex", 0);
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
-    // tidyDesk.timer(tidyDesk.timerSeconds);
+    tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
@@ -38,7 +38,7 @@ tidyDesk.resetGame = function() {
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
     $("img").fadeIn(500);
-    // tidyDesk.timer(tidyDesk.timerSeconds);
+    tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
@@ -58,29 +58,38 @@ tidyDesk.timer = function(seconds) {
       tidyDesk.modalBoxParagraph.text("Time's up!");
       tidyDesk.modalBoxButton.text("Play again");
       tidyDesk.modalBox.fadeIn(500);
-      tidyDesk.resetGame();
     }
   }, 1000);
 }
 
+
 tidyDesk.init = () => {
   tidyDesk.startGame();
-
+  
   $("img").on("click", function() {
     const imgClass = $(this).attr("class");
     $(this).fadeOut(500);
     tidyDesk.list
-      .find("." + imgClass)
-      .fadeTo(500, 0);
+    .find("." + imgClass)
+    .fadeTo(500, 0);
     tidyDesk.foundAllImages(6);
-    
-    tidyDesk.resetGame();
   })
+
+  $("img").keypress(function(event){
+    const keycode = event.which;
+    if(keycode == '13'){
+      const imgClass = $(this).attr("class");
+      $(this).fadeOut(500);
+      tidyDesk.list
+        .find("." + imgClass)
+        .fadeTo(500, 0);
+      tidyDesk.foundAllImages(6);  
+    }
+  })
+
+  tidyDesk.resetGame();
 }
     
-
-
-
 $(function() {
   tidyDesk.init();
 })

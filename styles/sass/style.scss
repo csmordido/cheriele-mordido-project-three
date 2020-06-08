@@ -43,42 +43,6 @@ h1 span {
   }
 }
 
-.coffee-cup {
-  width: 41px;
-  right: 40px;
-  bottom: 225px;
-}
-
-.crumpled-paper {
-  width: 40.15px;
-  left: 35px;
-  bottom: 70px;
-}
-
-.fork {
-  width: 73.2px;
-  bottom: 50px;
-  right: 350px;
-}
-
-.post-it {
-  width: 35px;
-  right: 130px;
-  top: 200px;
-}
-
-.sunrise {
-  width: 55.6px;
-  right: 100px;
-  top: 220px;
-}
-
-.bottled-water {
-  width: 31.6px;
-  bottom: 210px;
-  left: 200px;
-}
-
 .timer {
   top: 0;
   left: 50%;
@@ -123,7 +87,55 @@ h1 span {
     width: 160px;
     padding: 8px;
     margin-top: 20px;
+    &:hover, &:focus {
+      background-color: $color-purple;
+      color: $color-yellow;
+    }
   }
+}
+
+.interactive-window img {
+  transition: transform 0.4s;
+}
+
+.interactive-window img:focus {
+  transform: scale(1.5);
+}
+
+.coffee-cup {
+  width: 41px;
+  right: 40px;
+  bottom: 225px;
+}
+
+.crumpled-paper {
+  width: 40.15px;
+  left: 35px;
+  bottom: 70px;
+}
+
+.fork {
+  width: 73.2px;
+  bottom: 50px;
+  right: 350px;
+}
+
+.post-it {
+  width: 35px;
+  right: 130px;
+  top: 200px;
+}
+
+.sunrise {
+  width: 55.6px;
+  right: 100px;
+  top: 220px;
+}
+
+.bottled-water {
+  width: 31.6px;
+  bottom: 210px;
+  left: 200px;
 }
 
 .images-list {

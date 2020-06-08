@@ -1,5 +1,6 @@
 const tidyDesk= {};
 
+
 tidyDesk.modalBox = $(".modal-box");
 tidyDesk.modalBoxParagraph = $(".modal-box p");
 tidyDesk.modalBoxButton = $(".modal-box button");

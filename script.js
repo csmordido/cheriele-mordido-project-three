@@ -53,6 +53,7 @@ tidyDesk.timer = function(seconds) {
     if (numberOfHiddenImages === 6) {
       clearInterval(timer);
       tidyDesk.timerText.text(seconds);
+      $("img").removeAttr("tabindex");
     } else if (counter === -1) {
       clearInterval(timer);
       tidyDesk.timerText.text(seconds);
@@ -60,6 +61,7 @@ tidyDesk.timer = function(seconds) {
       tidyDesk.modalBoxParagraph.text("Time's up!");
       tidyDesk.modalBoxButton.text("Play again");
       tidyDesk.modalBox.fadeIn(500);
+      $("img").removeAttr("tabindex");
     }
   }, 1000);
 }
@@ -88,6 +90,7 @@ tidyDesk.init = () => {
       tidyDesk.foundAllImages(6);  
     }
   })
+  
 
   tidyDesk.resetGame();
 }

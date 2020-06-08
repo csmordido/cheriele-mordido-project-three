@@ -26,6 +26,7 @@ tidyDesk.startGame = function() {
 tidyDesk.foundAllImages = function(numberOfImagesToFind) {
   const numberOfHiddenImages = tidyDesk.countHiddenImages();
   if ( numberOfHiddenImages === numberOfImagesToFind - 1 ) {
+    $("img").removeAttr("tabindex");
     tidyDesk.modalBoxParagraph
       .text("Congratulations! Your desk is ready for another bootcamp project!");
     tidyDesk.modalBoxButton.text("Play again");
@@ -35,6 +36,7 @@ tidyDesk.foundAllImages = function(numberOfImagesToFind) {
 
 tidyDesk.resetGame = function() {
   tidyDesk.modalBoxButton.on("click", function() {
+    $("img").attr("tabindex", 0);
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
     $("img").fadeIn(500);

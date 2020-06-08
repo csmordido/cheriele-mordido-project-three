@@ -1,0 +1,172 @@
+// for small desktops
+@media (max-width: 1142px) {
+  .wrapper {
+    max-width: 847px;
+  }
+
+  .main-container {
+    flex-direction: column-reverse;
+  }
+  
+  .images-list {
+    max-width: initial;
+    width: 100%;
+    flex-basis: auto;
+    padding: 70px 50px 35px 50px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .interactive-window {
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 70px;
+  }
+}
+
+// for tablets
+@media (max-width: 867px) {
+  .wrapper {
+    max-width: 690px;
+  }
+
+  .coffee-cup {
+    right: 120px;
+    bottom: 20px;
+  }
+
+  .crumpled-paper {
+    left: 75px;
+    bottom: 120px;
+  }
+
+  .bottled-water {
+    bottom: 210px;
+    left: 130px;
+  }
+}
+
+// for landscape phones and portrait tablets
+@media (max-width: 690px) {
+  .wrapper {
+    max-width: 480px;
+  }
+
+  h1 {
+    font-size: 6rem;
+    line-height: 0.8;
+    span {
+      font-size: 1.6rem;
+      margin-top: 20px;
+    }
+  }
+
+  .images-list h2 {
+    font-size: 1.1rem;
+  }
+
+  .images-list ul li {
+    font-size: 1.2rem;
+  }
+
+  .interactive-window {
+    background: url('../images/main-window-bg-480.jpg') no-repeat center;
+  }
+
+  .coffee-cup {
+    right: 0;
+    bottom: 100px;
+  }
+
+  .crumpled-paper {
+    left: 40px;
+    bottom: 205px;
+  }
+
+  .fork {
+    bottom: 80px;
+    right: 210px;
+  }
+
+  .post-it {
+    right: 10px;
+    top: 200px;
+  }
+
+  .sunrise {
+    right: 0;
+  }
+
+  .bottled-water {
+    bottom: 20px;
+    left: 105px;
+  }
+}
+
+// for landscape phones and down
+@media (max-width: 480px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .wrapper {
+    max-width: 320px;
+  }
+
+  header {
+    height: 100vh;
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+    top: 30vh;
+    padding: initial;
+  }
+
+  @keyframes move-down {
+    0% {bottom: 10px;}
+    50% {bottom: 20px;}
+    100% {bottom: 10px;}
+  }
+
+  .down-arrow {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: move-down 0.8s ease-in-out infinite;
+    a {
+      text-decoration: none;
+      color: $color-yellow;
+      font-size: 2.5rem;
+      display: block;
+      }
+    }
+
+  .interactive-window {
+    background: url('../images/main-window-bg-320.jpg') no-repeat center;
+    .modal-box {
+      p {
+        font-size: 1.2rem;
+        max-width: 305px;
+      }
+    }
+  }
+
+  .crumpled-paper {
+    left: 120px;
+  }
+
+  .images-list ul {
+    justify-content: center;
+  }
+
+
+
+}

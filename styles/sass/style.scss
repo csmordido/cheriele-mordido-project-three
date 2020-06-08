@@ -35,7 +35,7 @@ h1 span {
   position: relative;
   max-width: 847px;
   height: 560px;
-  background: url("../images/main-window-bg.jpg") no-repeat center;
+  background: url("../images/mainWindowBg.jpg") no-repeat center;
   border-radius: 10px;
   flex-basis: 75%;
   img, .modal-box, .timer {
@@ -170,4 +170,4 @@ ul li.post-it {
   font-size: 1rem;
 }
 
-@import './media-queries';
+@import './mediaQueries';

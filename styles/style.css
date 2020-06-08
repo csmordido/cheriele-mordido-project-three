@@ -271,7 +271,7 @@ h1 span {
   position: relative;
   max-width: 847px;
   height: 560px;
-  background: url("../images/main-window-bg.jpg") no-repeat center;
+  background: url("../images/mainWindowBg.jpg") no-repeat center;
   border-radius: 10px;
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
@@ -506,7 +506,7 @@ ul li.post-it {
     font-size: 1.2rem;
   }
   .interactive-window {
-    background: url("../images/main-window-bg-480.jpg") no-repeat center;
+    background: url("../images/mainWindowBg480.jpg") no-repeat center;
   }
   .coffee-cup {
     right: 0;
@@ -588,7 +588,7 @@ ul li.post-it {
     display: block;
   }
   .interactive-window {
-    background: url("../images/main-window-bg-320.jpg") no-repeat center;
+    background: url("../images/mainWindowBg320.jpg") no-repeat center;
   }
   .interactive-window .modal-box p {
     font-size: 1.2rem;

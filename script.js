@@ -16,9 +16,10 @@ tidyDesk.countHiddenImages = function() {
 
 tidyDesk.startGame = function() {
   tidyDesk.modalBoxButton.on("click", function() {
+    $("img").attr("tabindex", 0);
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
-    tidyDesk.timer(tidyDesk.timerSeconds);
+    // tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
@@ -37,7 +38,7 @@ tidyDesk.resetGame = function() {
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
     $("img").fadeIn(500);
-    tidyDesk.timer(tidyDesk.timerSeconds);
+    // tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
@@ -47,7 +48,7 @@ tidyDesk.timer = function(seconds) {
     tidyDesk.timerText.text(counter);
     counter--;
     numberOfHiddenImages = tidyDesk.countHiddenImages();
-    if (numberOfHiddenImages === 5) {
+    if (numberOfHiddenImages === 6) {
       clearInterval(timer);
       tidyDesk.timerText.text(seconds);
     } else if (counter === -1) {
@@ -67,18 +68,18 @@ tidyDesk.init = () => {
 
   $("img").on("click", function() {
     const imgClass = $(this).attr("class");
-    if (imgClass !== "sunrise") {
-      $(this).fadeOut(500);
-      tidyDesk.list
-        .find("." + imgClass)
-        .fadeTo(500, 0);
-      tidyDesk.foundAllImages(5);
-    }
-
+    $(this).fadeOut(500);
+    tidyDesk.list
+      .find("." + imgClass)
+      .fadeTo(500, 0);
+    tidyDesk.foundAllImages(6);
+    
     tidyDesk.resetGame();
-
   })
 }
+    
+
+
 
 $(function() {
   tidyDesk.init();

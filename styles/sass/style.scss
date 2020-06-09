@@ -31,6 +31,50 @@ h1 span {
   align-items: center;
 }
 
+.images-list {
+  background-color: $color-blue;
+  max-width: 284px;
+  padding: 50px 20px 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  flex-basis: 25%;
+  h2 {
+    font: 700 1.3rem "Lato", sans-serif;
+    color: $color-blue;
+    background-color: $color-yellow;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    max-width: 225px;
+    position: absolute;
+    top: -21.5px;
+    z-index: 20;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      font: 400 1.25rem "Lato", sans-serif;
+      color: $color-blue;
+      background-color: $color-yellow;
+      border-radius: 5px;
+      padding: 8px;
+      width: 170px;
+      text-align: center;
+      margin-bottom: 10px;
+      opacity: 0;
+    }
+  }
+}
+
+ul li.post-it {
+  font-size: 1rem;
+}
+
 .interactive-window {
   position: relative;
   max-width: 847px;
@@ -138,48 +182,28 @@ h1 span {
   left: 200px;
 }
 
-.images-list {
-  background-color: $color-blue;
-  max-width: 284px;
-  padding: 80px 20px 60px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border-radius: 10px;
-  flex-basis: 25%;
-  h2 {
-    font: 700 1.3rem "Lato", sans-serif;
-    color: $color-blue;
-    background-color: $color-yellow;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    max-width: 225px;
-    position: absolute;
-    top: -21.5px;
-    z-index: 20;
-  }
-  ul {
-    list-style-type: none;
-    li {
-      font: 400 1.3rem "Lato", sans-serif;
-      color: $color-blue;
-      background-color: $color-yellow;
-      border-radius: 5px;
-      padding: 8px;
-      width: 170px;
-      text-align: center;
-      margin-bottom: 10px;
-      opacity: 0;
-    }
-  }
+.apple {
+  width: 25.3px;
+  bottom: 170px;
+  left: 300px;
 }
 
-ul li.post-it {
-  font-size: 1rem;
+.banana-peel {
+  width: 43.2px;
+  bottom: 120px;
+  left: 170px;
+}
+
+.saucer {
+  width: 62.2px;
+  right: 40px;
+  bottom: 145px;
+}
+
+.cap {
+  width: 71.3px;
+  top: 147px;
+  right: 275px;
 }
 
 @import './mediaQueries';

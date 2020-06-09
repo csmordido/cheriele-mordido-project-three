@@ -1,5 +1,6 @@
 const tidyDesk= {};
 
+tidyDesk.image = $("img");
 tidyDesk.modalBox = $(".modal-box");
 tidyDesk.modalBoxParagraph = $(".modal-box p");
 tidyDesk.modalBoxButton = $(".modal-box button");
@@ -16,17 +17,17 @@ tidyDesk.countHiddenImages = function() {
 
 tidyDesk.startGame = function() {
   tidyDesk.modalBoxButton.on("click", function() {
-    $("img").attr("tabindex", 0);
+    tidyDesk.image.attr("tabindex", 0);
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
-    tidyDesk.timer(tidyDesk.timerSeconds);
+    // tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
 tidyDesk.foundAllImages = function(numberOfImagesToFind) {
   const numberOfHiddenImages = tidyDesk.countHiddenImages();
   if ( numberOfHiddenImages === numberOfImagesToFind - 1 ) {
-    $("img").removeAttr("tabindex");
+    tidyDesk.image.removeAttr("tabindex");
     tidyDesk.modalBoxParagraph
       .text("Congratulations! Your desk is ready for another bootcamp project!");
     tidyDesk.modalBoxButton.text("Play again");
@@ -36,11 +37,11 @@ tidyDesk.foundAllImages = function(numberOfImagesToFind) {
 
 tidyDesk.resetGame = function() {
   tidyDesk.modalBoxButton.on("click", function() {
-    $("img").attr("tabindex", 0);
+    tidyDesk.image.attr("tabindex", 0);
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
-    $("img").fadeIn(500);
-    tidyDesk.timer(tidyDesk.timerSeconds);
+    tidyDesk.image.fadeIn(500);
+    // tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
@@ -52,25 +53,24 @@ tidyDesk.timer = function(seconds) {
     numberOfHiddenImages = tidyDesk.countHiddenImages();
     if (numberOfHiddenImages === 6) {
       clearInterval(timer);
-      tidyDesk.timerText.text(seconds);
-      $("img").removeAttr("tabindex");
+      tidyDesk.timerText.text(counter);
+      tidyDesk.image.removeAttr("tabindex");
     } else if (counter === -1) {
       clearInterval(timer);
-      tidyDesk.timerText.text(seconds);
+      tidyDesk.timerText.text(counter);
       tidyDesk.listItem.fadeTo(500, 0);
       tidyDesk.modalBoxParagraph.text("Time's up!");
       tidyDesk.modalBoxButton.text("Play again");
       tidyDesk.modalBox.fadeIn(500);
-      $("img").removeAttr("tabindex");
+      tidyDesk.image.removeAttr("tabindex");
     }
   }, 1000);
 }
 
-
 tidyDesk.init = () => {
   tidyDesk.startGame();
   
-  $("img").on("click", function() {
+  tidyDesk.image.on("click", function() {
     const imgClass = $(this).attr("class");
     $(this).fadeOut(500);
     tidyDesk.list
@@ -79,7 +79,7 @@ tidyDesk.init = () => {
     tidyDesk.foundAllImages(6);
   })
 
-  $("img").keypress(function(event){
+  tidyDesk.image.keypress(function(event){
     const keycode = event.which;
     if(keycode == '13'){
       const imgClass = $(this).attr("class");
@@ -91,7 +91,6 @@ tidyDesk.init = () => {
     }
   })
   
-
   tidyDesk.resetGame();
 }
     

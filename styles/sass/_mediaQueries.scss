@@ -18,6 +18,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
+      li.post-it {
+        padding: 10px;
+      }
     }
   }
 
@@ -92,10 +95,6 @@
 
   .images-list h2 {
     font-size: 1.1rem;
-  }
-
-  ul li.post-it {
-    padding: 10px;
   }
 
   .interactive-window {

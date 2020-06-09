@@ -502,6 +502,9 @@ ul li.post-it {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .images-list ul li.post-it {
+    padding: 10px;
+  }
   .interactive-window {
     width: 100%;
     -ms-flex-preferred-size: auto;
@@ -561,9 +564,6 @@ ul li.post-it {
   }
   .images-list h2 {
     font-size: 1.1rem;
-  }
-  ul li.post-it {
-    padding: 10px;
   }
   .interactive-window {
     background: url("../images/mainWindowBg480.jpg") no-repeat center;

@@ -20,7 +20,7 @@ tidyDesk.startGame = function() {
     tidyDesk.image.attr("tabindex", 0);
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
-    // tidyDesk.timer(tidyDesk.timerSeconds);
+    tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
@@ -41,24 +41,27 @@ tidyDesk.resetGame = function() {
     tidyDesk.modalBox.fadeOut(500);
     tidyDesk.listItem.fadeTo(500, 1);
     tidyDesk.image.fadeIn(500);
-    // tidyDesk.timer(tidyDesk.timerSeconds);
+    tidyDesk.timer(tidyDesk.timerSeconds);
   })
 }
 
 tidyDesk.timer = function(seconds) {
   let counter = seconds;
   let timer = setInterval(function() {
+    tidyDesk.timerParagraph.fadeTo("fast", 1);
     tidyDesk.timerText.text(counter);
     counter--;
     numberOfHiddenImages = tidyDesk.countHiddenImages();
-    if (numberOfHiddenImages === 6) {
+    if (numberOfHiddenImages === 10) {
       clearInterval(timer);
-      tidyDesk.timerText.text(counter);
+      tidyDesk.timerParagraph.fadeTo("fast", 0.5);
+      tidyDesk.timerText.text(seconds);
       tidyDesk.image.removeAttr("tabindex");
     } else if (counter === -1) {
       clearInterval(timer);
-      tidyDesk.timerText.text(counter);
-      tidyDesk.listItem.fadeTo(500, 0);
+      tidyDesk.timerParagraph.fadeTo("fast", 0.5);
+      tidyDesk.timerText.text(seconds);
+      tidyDesk.listItem.fadeTo("fast", 0);
       tidyDesk.modalBoxParagraph.text("Time's up!");
       tidyDesk.modalBoxButton.text("Play again");
       tidyDesk.modalBox.fadeIn(500);
@@ -76,7 +79,7 @@ tidyDesk.init = () => {
     tidyDesk.list
     .find("." + imgClass)
     .fadeTo(500, 0);
-    tidyDesk.foundAllImages(6);
+    tidyDesk.foundAllImages(10);
   })
 
   tidyDesk.image.keypress(function(event){
@@ -87,7 +90,7 @@ tidyDesk.init = () => {
       tidyDesk.list
         .find("." + imgClass)
         .fadeTo(500, 0);
-      tidyDesk.foundAllImages(6);  
+      tidyDesk.foundAllImages(10);  
     }
   })
   

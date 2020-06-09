@@ -40,18 +40,43 @@
   }
 
   .crumpled-paper {
-    left: 75px;
-    bottom: 120px;
+    left: 20px;
+    bottom: 10px;
+  }
+
+  .post-it {
+    right: 55px;
+  }
+
+  .sunrise {
+    right: 35px;
   }
 
   .bottled-water {
     bottom: 210px;
     left: 130px;
   }
+
+  .apple {
+    left: 220px;
+  }
+
+  .banana-peel {
+    left: 92px;
+  }
+
+  .saucer {
+    right: 5px;
+    bottom: 135px;
+  }
+
+  .cap {
+    right: 195px;
+  }
 }
 
 // for landscape phones and portrait tablets
-@media (max-width: 690px) {
+@media (max-width: 710px) {
   .wrapper {
     max-width: 480px;
   }
@@ -69,8 +94,8 @@
     font-size: 1.1rem;
   }
 
-  .images-list ul li {
-    font-size: 1.2rem;
+  ul li.post-it {
+    padding: 10px;
   }
 
   .interactive-window {
@@ -83,7 +108,7 @@
   }
 
   .crumpled-paper {
-    left: 40px;
+    left: 50px;
     bottom: 205px;
   }
 
@@ -102,13 +127,27 @@
   }
 
   .bottled-water {
-    bottom: 20px;
-    left: 105px;
+    bottom: 10px;
+    left: 155px;
+  }
+
+  .banana-peel {
+    left: 0;
+    bottom: 135px;
+  }
+
+  .saucer {
+    bottom: 170px;
+  }
+
+  .cap {
+    right: 147px;
+    top: 105px;
   }
 }
 
 // for landscape phones and down
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   html {
     scroll-behavior: smooth;
   }
@@ -126,6 +165,9 @@
     position: absolute;
     top: 30vh;
     padding: initial;
+    span {
+      font-size: 1.4rem;
+    }
   }
 
   @keyframes move-down {
@@ -149,6 +191,10 @@
       }
     }
 
+  .main-container {
+    margin-top: 100px;
+  }
+
   .interactive-window {
     background: url('../images/mainWindowBg320.jpg') no-repeat center;
     .modal-box {
@@ -159,8 +205,25 @@
     }
   }
 
+  .coffee-cup {
+    bottom: 110px;
+  }
+
   .crumpled-paper {
     left: 120px;
+  }
+
+  .apple {
+    left: 80px;
+  }
+
+  .banana-peel {
+    left: 90px;
+    bottom: 5px;
+  }
+
+  .cap {
+    right: 133px;
   }
 
   .images-list ul {

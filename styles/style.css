@@ -349,7 +349,7 @@ ul li.post-it {
 .timer p {
   font: 700 1.5rem "Lato", sans-serif;
   letter-spacing: 2px;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .interactive-window .modal-box {
@@ -519,16 +519,35 @@ ul li.post-it {
     bottom: 20px;
   }
   .crumpled-paper {
-    left: 75px;
-    bottom: 120px;
+    left: 20px;
+    bottom: 10px;
+  }
+  .post-it {
+    right: 55px;
+  }
+  .sunrise {
+    right: 35px;
   }
   .bottled-water {
     bottom: 210px;
     left: 130px;
   }
+  .apple {
+    left: 220px;
+  }
+  .banana-peel {
+    left: 92px;
+  }
+  .saucer {
+    right: 5px;
+    bottom: 135px;
+  }
+  .cap {
+    right: 195px;
+  }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 710px) {
   .wrapper {
     max-width: 480px;
   }
@@ -543,8 +562,8 @@ ul li.post-it {
   .images-list h2 {
     font-size: 1.1rem;
   }
-  .images-list ul li {
-    font-size: 1.2rem;
+  ul li.post-it {
+    padding: 10px;
   }
   .interactive-window {
     background: url("../images/mainWindowBg480.jpg") no-repeat center;
@@ -554,7 +573,7 @@ ul li.post-it {
     bottom: 100px;
   }
   .crumpled-paper {
-    left: 40px;
+    left: 50px;
     bottom: 205px;
   }
   .fork {
@@ -569,12 +588,23 @@ ul li.post-it {
     right: 0;
   }
   .bottled-water {
-    bottom: 20px;
-    left: 105px;
+    bottom: 10px;
+    left: 155px;
+  }
+  .banana-peel {
+    left: 0;
+    bottom: 135px;
+  }
+  .saucer {
+    bottom: 170px;
+  }
+  .cap {
+    right: 147px;
+    top: 105px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   html {
     scroll-behavior: smooth;
   }
@@ -589,6 +619,9 @@ ul li.post-it {
     position: absolute;
     top: 30vh;
     padding: initial;
+  }
+  h1 span {
+    font-size: 1.4rem;
   }
   @-webkit-keyframes move-down {
     0% {
@@ -628,6 +661,9 @@ ul li.post-it {
     font-size: 2.5rem;
     display: block;
   }
+  .main-container {
+    margin-top: 100px;
+  }
   .interactive-window {
     background: url("../images/mainWindowBg320.jpg") no-repeat center;
   }
@@ -635,8 +671,21 @@ ul li.post-it {
     font-size: 1.2rem;
     max-width: 305px;
   }
+  .coffee-cup {
+    bottom: 110px;
+  }
   .crumpled-paper {
     left: 120px;
+  }
+  .apple {
+    left: 80px;
+  }
+  .banana-peel {
+    left: 90px;
+    bottom: 5px;
+  }
+  .cap {
+    right: 133px;
   }
   .images-list ul {
     -webkit-box-pack: center;

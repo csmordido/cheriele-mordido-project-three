@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidy Desk</title>
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Monofett&display=swap" rel="stylesheet">
+  
+  <!-- external stylesheet -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- header starts -->
+    <header>
+      <h1>Tidy Desk <span>A hidden object game</span></h1>
+      <div class="down-arrow">
+        <a href="#main-game"><span class="visually-hidden">Scroll down</span>&#x25BC;</a>
+      </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- main starts -->
+    <main>
+      <div class="main-container">
+        <div class="images-list">
+          <h2>Objects to find</h2>
+          <ul>
+            <li class="coffee-cup">coffee cup</li>
+            <li class="crumpled-paper">crumpled paper</li>
+            <li class="bottled-water">bottled water</li>
+            <li class="fork">fork</li>
+            <li class="post-it">post-it with stick man</li>
+            <li class="sunrise">sunrise picture</li>
+            <li class="apple">golden apple</li>
+            <li class="banana-peel">banana peel</li>
+            <li class="saucer">saucer</li>
+            <li class="cap">ball cap</li>
+          </ul>
+        </div> <!-- .images-list -->
+
+        <div class="interactive-window" id="main-game">
+          <div class="timer">
+            <p>00:<span>30</span></p>
+          </div> <!-- .timer -->
+
+          <div class="modal-box">
+            <p>Pulled an all-nighter to finish the project and now the desk's a mess! Really need to clean up before starting a new project.</p>
+            <button type="button">Let's do it!</button>
+          </div> <!-- .modal-box -->
+
+          <img src="./images/coffeeCup.svg" alt="a coffee cup" class="coffee-cup">
+          <img src="./images/crumpledPaper.svg" alt="a crumpled paper" class="crumpled-paper">
+          <img src="./images/fork.svg" alt="a fork" class="fork">
+          <img src="./images/postIt.svg" alt="a post-it with a drawing of a stick man" class="post-it">
+          <img src="./images/sunrise.svg" alt="picture of a sunrise" class="sunrise">
+          <img src="./images/bottledWater.svg" alt="bottled water" class="bottled-water">
+          <img src="./images/goldenApple.svg" alt="a golden apple" class="apple"> 
+          <img src="./images/bananaPeel.svg" alt="a banana peel" class="banana-peel">
+          <img src="./images/saucer.svg" alt="a saucer" class="saucer">
+          <img src="./images/ballCap.svg" alt="a blue ball cap" class="cap">
+        </div> <!-- .interactive-window -->
+      </div> <!-- .main-container -->
+    </main>
+    <!-- main ends -->
+  </div> <!-- .wrapper -->
+  
+  <!-- jquery -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+
+  <!-- external javascript -->
+  <script src="script.js"></script>
+  
+</body>
+</html>
